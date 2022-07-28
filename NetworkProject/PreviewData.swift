@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+extension Certificate {
+    static let preview = Certificate(imageName: "SwiftUI",
+                                     courseTitle: "Basics of SwiftUI",
+                                     teacherName: "Quentin",
+                                     completionDate: Date())
+}

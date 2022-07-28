@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct DetailCertificateView: View {
+    
+    let certificate: Certificate
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack (spacing: 16) {
+            Image(certificate.imageName)
+            Text(certificate.courseTitle)
+                .font(.title)
+                .fontWeight(.bold)
+            Text(certificate.teacherName)
+                .font(.title3)
+                .fontWeight(.light)
+        }
     }
 }
 
 struct DetailCertificateView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailCertificateView()
+        DetailCertificateView(certificate: Certificate.preview)
     }
 }
